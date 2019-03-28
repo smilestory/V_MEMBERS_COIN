@@ -1,2 +1,4 @@
 # V_MEMBERS_COIN
  V MEMBERS COIN (VMC)
+
+Based on ERC-223 
