@@ -231,6 +231,7 @@ contract VMembersCoin is owned, ERC223Interface, ERC20CompatibleToken {
             receiver.tokenFallback(msg.sender, _value, _data);
         }
         emit Transfer(msg.sender, _to, _value);
+        return ;
     }
 
     /**
@@ -261,6 +262,7 @@ contract VMembersCoin is owned, ERC223Interface, ERC20CompatibleToken {
             receiver.tokenFallback(msg.sender, _value, empty);
         }
         emit Transfer(msg.sender, _to, _value);
+        return ;
     }
 
 
@@ -283,6 +285,7 @@ contract VMembersCoin is owned, ERC223Interface, ERC20CompatibleToken {
     function freezeAccount(address target, bool freeze) onlyOwner public {
         frozenAccount[target] = freeze;
         emit FrozenFunds(target, freeze);
+        return ;
     }
 
 }
